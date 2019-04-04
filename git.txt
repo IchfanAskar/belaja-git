@@ -2,7 +2,7 @@ pembelajaran github
 
 git = version control sistem
 
-"git init" (membuat repository di posisi berapa)
+"git init" (membuat repository di posisi berapa) << melakukan 1x untuk membuat projeck baru di github
 
 Cara meng add file dalam folder(staging area)
 {
@@ -19,11 +19,17 @@ git commit -m "komentar di sini"
 
 menambah ke remote repo
 {
-" git remote add github http:/xxxxx "
+" git remote add github http:/xxxxx " << cukup melakukan 1x
 ket :   github = tempat yg akan di push
 	http = link tempat di github
-"git push github master"
+"git push github master" << tinggal melakukan langkah ini untuk melakukan push seterusnya
 ket : master = nama branch
+}
+
+cara melakukan clone / melanjutkan projek team
+{
+git clone link-github
+git clone https://github.com/IchfanAskar/belaja-git.git << contoh
 }
 
 mengecek log
@@ -34,7 +40,7 @@ git log --oneline
 mengdowload dari remote repo
 {
 git pull nama-remote nama-branch
-'git pull github master'
+'git pull github master' 
 }
 
 membatalkan add ke staging area
@@ -43,15 +49,28 @@ git reset = untuk semua pembatalan add
 git reset nama-file = untuk file tertentu
 }
 
-menghapus semua pembarahuan du stagubg dab working
+menghapus semua pembarahuan di staging dan working
 {
 git reset --hard ->semua
+}
+
+membatalkan commit
+{
+git reset --soft << cuma di bagian commit
+git reset --hard << reset sampai working foder
+}
+
+membatalkan commit dan push ke local dan remote repo
+{
+git revert kode-commit
+git revert 879e0df << contoh
+ket : kode commit dapat di lihat di 'git log --oneline
 }
 
 membuat branch baru di local
 {
 git branch nama-branch
-git branch fitur-a
+git branch fitur-a <<contoh
 }
 
 mengecek semua branch
@@ -63,7 +82,7 @@ ket: tandan * adalah branch yang di gunakan
 cara mengganti branch yg di gunakan
 {
 git checkout nama-branch
-git checkout fitur-a
+git checkout fitur-a << contoh
 }
 
 mengecek branch yg aktif
@@ -71,6 +90,27 @@ mengecek branch yg aktif
 git branch -v
 }
 
+melakukan merge pada branch lain
+{
+git merge nama-branch
+git merge fitur-a << contoh
+
+## lalu lakukan push
+'git push github master'
+master = adalah induk branch yg telah melakukan merge pada fitur-a
+}
+
+menghapus branch pada local repo
+{
+git branch -d nama-branch
+git branch -d fitur-a << contoh
+}
+
+menghapus branch pada remote repo
+{
+git push nama-repo : nama-branch
+git push github :fitur-a << contoh
+}
 
 
 
