@@ -1,0 +1,77 @@
+pembelajaran github
+
+git = version control sistem
+
+"git init" (membuat repository di posisi berapa)
+
+Cara meng add file dalam folder(staging area)
+{
+"git add ./<nama file>"
+ket:
+. = semua file yg ada di dlm folder
+nama fiile = fokus 1 file
+}
+
+menambah ke local repo
+{
+git commit -m "komentar di sini"
+}
+
+menambah ke remote repo
+{
+" git remote add github http:/xxxxx "
+ket :   github = tempat yg akan di push
+	http = link tempat di github
+"git push github master"
+ket : master = nama branch
+}
+
+mengecek log
+{
+git log --oneline
+}
+
+mengdowload dari remote repo
+{
+git pull nama-remote nama-branch
+'git pull github master'
+}
+
+membatalkan add ke staging area
+{
+git reset = untuk semua pembatalan add
+git reset nama-file = untuk file tertentu
+}
+
+menghapus semua pembarahuan du stagubg dab working
+{
+git reset --hard ->semua
+}
+
+membuat branch baru di local
+{
+git branch nama-branch
+git branch fitur-a
+}
+
+mengecek semua branch
+{
+git branch --all
+ket: tandan * adalah branch yang di gunakan
+} 
+
+cara mengganti branch yg di gunakan
+{
+git checkout nama-branch
+git checkout fitur-a
+}
+
+mengecek branch yg aktif
+{
+git branch -v
+}
+
+
+
+
+

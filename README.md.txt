@@ -16,3 +16,7 @@
 	'git remote add github https://github.com/IchfanAskar/belaja-git.git'
 - Mengeupload remote repo
 	'pust nama-remote nama-branch'
+- mengdowload dari remote repo
+	'pull nama-remote nama-branch'
+- membatalkan perubahan
+	'git reset'
